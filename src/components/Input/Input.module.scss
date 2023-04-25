@@ -1,0 +1,22 @@
+@use "../../scss";
+
+.container {
+  @include scss.flex(column, center, center, nowrap);
+  gap: 0.3rem;
+  padding: 0.7rem;
+}
+
+.input {
+  border: none;
+  outline: none;
+  width: 100%;
+  max-width: 25rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  background-color: scss.$background;
+  box-shadow: 1px 1px 5px #171717;
+}
+
+.error-msg {
+  color: scss.$tertiary;
+}

@@ -1,0 +1,35 @@
+@use "../../scss";
+
+.backdrop {
+  position: fixed;
+  inset: 0 0 0 0;
+  background-color: rgb(0, 0, 0, 0.75);
+  backdrop-filter: blur(3px);
+  z-index: 20;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 30rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: scss.$primary;
+  box-shadow: scss.$shadow;
+  z-index: 100;
+}
+
+.close-btn {
+  cursor: pointer;
+  position: fixed;
+  right: 1rem;
+  font-size: 1.7rem;
+  color: scss.$font-secondary;
+  transition: transform 250ms;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
