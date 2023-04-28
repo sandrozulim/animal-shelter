@@ -1,0 +1,16 @@
+@use "../../scss";
+
+.btn {
+  @include scss.flex(row, center, center, nowrap);
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  background-color: scss.$primary;
+  color: scss.$font-secondary;
+  box-shadow: scss.$shadow;
+  transition: background-color 250ms;
+  &:hover {
+    background-color: scss.$tertiary;
+  }
+}

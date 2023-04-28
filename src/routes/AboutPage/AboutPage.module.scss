@@ -1,1 +1,38 @@
 @use "../../scss";
+
+.container {
+  @include scss.flex(column, flex-start, center, nowrap);
+  gap: 3rem;
+  max-width: 50rem;
+  margin: 1rem auto;
+}
+
+.about {
+  padding: 0 2rem;
+  text-align: justify;
+}
+
+.contact {
+  @include scss.flex(row, center, flex-start, wrap);
+  gap: 2rem;
+  width: 100%;
+}
+
+.contact-info {
+  @include scss.flex(column, center, flex-start, nowrap);
+  gap: 1rem;
+  gap: 0.5rem;
+  padding: 1rem;
+  flex-grow: 2;
+  button {
+    width: 100%;
+  }
+}
+
+.contact-form {
+  padding: 1rem;
+  text-align: center;
+  button {
+    margin: 0 auto;
+  }
+}

@@ -1,6 +1,6 @@
 import Root from "./routes/Root/Root";
+import AboutPage from "./routes/AboutPage/AboutPage";
 import { UserProvider } from "./contexts/UserContext";
-
 import {
   createBrowserRouter,
   createRoutesFromElements,
@@ -11,7 +11,7 @@ import {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
-      <Route path="about" element={<h3>DUMMY</h3>} />
+      <Route path="about" element={<AboutPage />} />
     </Route>
   )
 );

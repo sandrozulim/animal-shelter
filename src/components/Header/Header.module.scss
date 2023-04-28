@@ -1,18 +1,27 @@
 @use "../../scss";
 
 .header {
-  @include scss.flex(row, space-between, center, nowrap);
+  @include scss.flex(row, flex-start, center, nowrap);
+  gap: 1rem;
   position: fixed;
   left: 0;
   right: 0;
   height: scss.$header-height;
   padding: 0.8rem 2rem;
-  box-shadow: 0px 1px 7px scss.$font-primary;
+  box-shadow: scss.$shadow;
   background-color: scss.$background;
   z-index: 100;
+  @media screen and (max-width: 600px) {
+    padding: 0.8rem 0.5rem;
+  }
 }
 
 .title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: bold;
+}
+
+.toggle-box {
+  position: absolute;
+  right: 0.7rem;
 }

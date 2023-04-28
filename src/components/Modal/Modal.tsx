@@ -7,23 +7,20 @@ type ModalProps = {
   onClose: (isModalOpen: boolean) => void;
   children: ReactNode;
   className?: string;
+  title: string;
 };
 
-function Modal({ children, onClose, className }: ModalProps) {
+function Modal({ children, onClose, className, title }: ModalProps) {
   const portalRoot = document.getElementById("portal");
 
-  const modalClasses = className
-    ? `${classes["modal"]} ${className}`
-    : classes["modal"];
+  const modalClasses = className ? `${classes["modal"]} ${className}` : classes["modal"];
 
   const portalContent = (
     <>
       <div className={classes["backdrop"]} onClick={() => onClose(false)}></div>
       <div className={modalClasses}>
-        <AiOutlineCloseCircle
-          onClick={() => onClose(false)}
-          className={classes["close-btn"]}
-        />
+        <h3 className={classes["title"]}>{title}</h3>
+        <AiOutlineCloseCircle onClick={() => onClose(false)} className={classes["close-btn"]} />
         {children}
       </div>
     </>

@@ -1,13 +1,9 @@
 @use "../../scss";
 
-.nav-icon {
-  cursor: pointer;
-  font-size: 1.5rem;
-  transition: color 250ms;
-
-  &:hover {
-    color: scss.$tertiary;
-  }
+.nav-icon-btn {
+  padding: 0.4rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
 }
 
 .nav-container {
@@ -25,11 +21,15 @@
   transform: translateY(0);
 }
 
+.nav-list {
+  @include scss.flex(column, flex-start, center, nowrap);
+  gap: 1.5rem;
+}
+
 .nav-item {
   width: 100%;
+  padding: 0.5rem;
   text-align: center;
-  margin: 1.3rem 0;
-  padding: 1rem;
   color: scss.$font-secondary;
   background-color: scss.$secondary;
 }
@@ -37,15 +37,16 @@
 .link {
   display: inline-block;
   letter-spacing: 0.5px;
-  transition: all 250ms;
+  text-transform: uppercase;
+  transition: all 350ms;
 
   &:hover {
-    transform: scale(1.2);
     color: scss.$tertiary;
+    letter-spacing: 5px;
   }
 }
 
 .active {
   color: scss.$tertiary;
-  border-bottom: 2px solid scss.$tertiary;
+  border-bottom: 3px solid scss.$tertiary;
 }
