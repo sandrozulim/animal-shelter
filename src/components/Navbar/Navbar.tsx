@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import { TfiMenuAlt } from "react-icons/tfi";
+import { UserContext } from "../../contexts/UserContext";
 import Button from "../Button/Button";
 import classes from "./Navbar.module.scss";
 
@@ -15,13 +16,16 @@ type LinkClasses = {
 
 function Navbar({ navList }: NavbarProps) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const { isAdmin } = useContext(UserContext);
 
   const linkClasses = ({ isActive }: LinkClasses): string => {
-    return isActive ? `${classes["link"]} ${classes["active"]}` : classes["link"];
+    return isActive
+      ? `${classes["nav__link"]} ${classes["nav__link--active"]}`
+      : classes["nav__link"];
   };
 
   const links = navList.map((item) => (
-    <li className={classes["nav-item"]} key={item.path}>
+    <li className={classes["nav__item"]} key={item.path}>
       <NavLink className={linkClasses} to={item.path} onClick={() => setIsExpanded(false)}>
         {item.name}
       </NavLink>
@@ -34,8 +38,22 @@ function Navbar({ navList }: NavbarProps) {
         {isExpanded ? <AiOutlineClose /> : <TfiMenuAlt />}
       </Button>
 
-      <nav className={`${classes["nav-container"]} ${isExpanded ? classes["show"] : ""}`}>
-        <ul className={classes["nav-list"]}>{links}</ul>
+      <nav className={`${classes["nav"]} ${isExpanded ? classes["nav--show"] : ""}`}>
+        <ul className={classes["nav__list"]}>
+          {links}
+
+          {isAdmin && (
+            <li className={classes["nav__item"]} key={"new-animal"}>
+              <NavLink
+                className={linkClasses}
+                to={"new-animal"}
+                onClick={() => setIsExpanded(false)}
+              >
+                {"new-animal"}
+              </NavLink>
+            </li>
+          )}
+        </ul>
       </nav>
     </>
   );

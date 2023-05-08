@@ -1,0 +1,31 @@
+@use "../../scss";
+
+.animal-details {
+  @include scss.flex(column, flex-start, center, nowrap);
+  max-width: 60rem;
+  margin: 0rem auto;
+  background-color: scss.$primary-light;
+
+  &__controls {
+    @include scss.flex(row, flex-end, center, nowrap);
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: scss.$primary;
+
+    button {
+      font-size: 1.2rem;
+      padding: 0.7rem;
+      border-radius: 50%;
+      background-color: scss.$primary-light;
+    }
+  }
+
+  &__back-btn {
+    margin-right: auto;
+  }
+
+  &__info {
+    width: 100%;
+  }
+}

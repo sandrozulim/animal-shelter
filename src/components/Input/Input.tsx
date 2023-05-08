@@ -3,27 +3,35 @@ import classes from "./Input.module.scss";
 
 type InputProps = ComponentPropsWithoutRef<"input"> & {
   label?: string;
+  labelAfter?: boolean;
   id: string;
   isInvalid?: boolean;
   errorMsg?: string;
+  className?: string;
 };
 
 function Input(props: InputProps) {
-  const { label, id, isInvalid = false, errorMsg, ...rest } = props;
+  const { label, labelAfter = false, id, isInvalid = false, errorMsg, className, ...rest } = props;
+
+  const inputClasses = className ? `${classes["input"]} ${className}` : classes["input"];
 
   return (
-    <div className={classes["container"]}>
-      {label && (
-        <label className={classes["label"]} htmlFor={id}>
+    <div className={inputClasses}>
+      {label && !labelAfter && (
+        <label className={classes["input__label"]} htmlFor={id}>
           {label}
         </label>
       )}
 
-      <input className={classes["input"]} id={id} {...rest} />
+      <input className={classes["input__inp"]} id={id} {...rest} />
 
-      {isInvalid && errorMsg && (
-        <p className={classes["error-msg"]}>{errorMsg}</p>
+      {label && labelAfter && (
+        <label className={classes["input__label"]} htmlFor={id}>
+          {label}
+        </label>
       )}
+
+      {isInvalid && errorMsg && <p className={classes["input__error"]}>{errorMsg}</p>}
     </div>
   );
 }

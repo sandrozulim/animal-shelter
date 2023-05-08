@@ -1,8 +1,13 @@
 @use "../../scss";
 
 .title {
-  display: inline-block;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid scss.$font-primary;
-  font-size: 2rem;
+  text-align: center;
+  margin: 2rem;
+
+  &__text {
+    display: inline-block;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid scss.$font-primary;
+    font-size: 2rem;
+  }
 }

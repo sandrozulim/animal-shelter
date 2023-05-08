@@ -1,10 +1,12 @@
 $background: #ffffff;
 $primary: #171c2b;
-$secondary: #262d3b;
-$tertiary: #fe5959;
-$font-primary: #171c2b;
+$primary-light: #262d3b;
+$secondary: #fe5959;
+$tertiary: #d78c2a;
+$font-primary: #0f0f0f;
 $font-secondary: #fefefe;
 
-$shadow: 1px 1px 5px $primary;
-
 $header-height: 4rem;
+$border-light: 1px solid rgb(0, 0, 0, 0.5);
+$shadow: 7px 7px 17px -5px rgb(0, 0, 0, 0.8);
+$shadow-light: 3px 3px 5px rgb(0, 0, 0, 0.5);

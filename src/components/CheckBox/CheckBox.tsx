@@ -8,10 +8,10 @@ type CheckBoxProps = ComponentPropsWithoutRef<"input"> & {
 
 function CheckBox({ label, id, ...rest }: CheckBoxProps) {
   return (
-    <div className={classes["checkbox-container"]}>
-      <input className={classes["checkbox"]} type="checkbox" id={id} {...rest} />
+    <div className={classes["checkbox"]}>
+      <input className={classes["checkbox__input"]} type="checkbox" id={id} {...rest} />
 
-      <label className={classes["label"]} htmlFor={id}>
+      <label className={classes["label__label"]} htmlFor={id}>
         {label}
       </label>
     </div>

@@ -17,12 +17,12 @@ function Header() {
 
   return (
     <header className={classes["header"]}>
-      <h1 className={classes["title"]}>Shelter</h1>
+      <h1 className={classes["header__title"]}>Shelter</h1>
 
       <Navbar navList={navList} />
 
       <Toggle
-        className={classes["toggle-box"]}
+        className={classes["header__toggle"]}
         id="admin"
         label={<GrUserAdmin />}
         checked={isAdmin}

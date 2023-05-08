@@ -15,27 +15,33 @@
   transform: translate(-50%, -50%);
   width: 80%;
   max-width: 30rem;
+  min-height: 10rem;
+  max-height: 70vh;
+  overflow-y: scroll;
   padding: 1rem;
   border-radius: 8px;
+  text-align: center;
   background-color: scss.$background;
   box-shadow: scss.$shadow;
   z-index: 100;
-}
 
-.title {
-  font-size: 1.5rem;
-  text-align: center;
-}
+  &__title {
+    font-size: 1.2rem;
+    margin: 1.5rem;
+    color: scss.$tertiary;
+  }
 
-.close-btn {
-  cursor: pointer;
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  font-size: 1.7rem;
-  color: scss.$primary;
-  transition: transform 250ms;
-  &:hover {
-    transform: scale(1.1);
+  &__close-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 1.7rem;
+    color: scss.$primary;
+    transition: transform 250ms;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

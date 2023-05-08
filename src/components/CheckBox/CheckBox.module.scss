@@ -1,15 +1,16 @@
 @use "../../scss";
 
-.checkbox-container {
-  @include scss.flex(row, center, center, nowrap);
-  gap: 0.4rem;
-}
-
 .checkbox {
-  cursor: pointer;
-  accent-color: scss.$tertiary;
-}
+  @include scss.flex(row, flex-start, center, nowrap);
+  gap: 0.4rem;
+  padding: 0.7rem;
 
-.label {
-  cursor: pointer;
+  &__input {
+    cursor: pointer;
+    accent-color: scss.$tertiary;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
 }

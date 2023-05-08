@@ -38,26 +38,72 @@
       "opis": "Kavez za srednje papige"
     }
   ],
-  "zivotinje": [
+  "animals": [
     {
-      "id": 1,
-      "ime": "Garfield",
-      "vrsta": "mačka",
-      "cip": false,
-      "godine": 44,
-      "opis": "Voli lazanje",
-      "pregled": "2022-09-23",
-      "udomljen": true
+      "name": "Buddy",
+      "age": 3,
+      "species": "dog",
+      "microchipped": false,
+      "adopted": true,
+      "checkup": "2022-10-01",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dicta sunt esse officia quam autem iusto recusandae sint repellendus libero eligendi earum rerum praesentium illum, soluta accusamus quisquam, vero nihil? ",
+      "image": "https://cdn.pixabay.com/photo/2016/02/19/15/46/dog-1210559__480.jpg",
+      "id": 1
     },
     {
-      "id": 2,
-      "ime": "Snoopy",
-      "vrsta": "pas",
-      "cip": true,
-      "godine": 50,
-      "opis": "Više od običnog psa",
-      "pregled": "2000-02-13",
-      "udomljen": false
+      "name": "Maxonja",
+      "age": "5",
+      "species": "dog",
+      "microchipped": true,
+      "checkup": "2023-01-14",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dicta sunt esse officia quam autem iusto recusandae sint repellendus libero eligendi earum rerum praesentium illum, soluta accusamus quisquam, vero nihil? ",
+      "image": "https://cdn.pixabay.com/photo/2017/09/25/13/12/dog-2785074__480.jpg",
+      "adopted": true,
+      "id": 2
+    },
+    {
+      "name": "Charlie",
+      "age": 1,
+      "species": "dog",
+      "microchipped": false,
+      "adopted": true,
+      "checkup": "2023-06-07",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dicta sunt esse officia quam autem iusto recusandae sint repellendus libero eligendi earum rerum praesentium illum, soluta accusamus quisquam, vero nihil? ",
+      "image": "https://www.purina.co.uk/sites/default/files/2020-12/Dog_1098119012_Teaser.jpg",
+      "id": 3
+    },
+    {
+      "name": "Fluffy",
+      "age": "4",
+      "species": "cat",
+      "microchipped": true,
+      "adopted": true,
+      "checkup": "2022-11-15",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dicta sunt esse officia quam autem iusto recusandae sint repellendus libero eligendi earum rerum praesentium illum, soluta accusamus quisquam, vero nihil? ",
+      "image": "https://cdn.pixabay.com/photo/2017/11/14/13/06/kitty-2948404__480.jpg",
+      "id": 5
+    },
+    {
+      "name": "Whiskers",
+      "age": 1,
+      "species": "cat",
+      "microchipped": false,
+      "adopted": false,
+      "checkup": "2023-07-09",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dicta sunt esse officia quam autem iusto recusandae sint repellendus libero eligendi earum rerum praesentium illum, soluta accusamus quisquam, vero nihil? ",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg",
+      "id": 6
+    },
+    {
+      "name": "Mittens",
+      "age": 3,
+      "species": "cat",
+      "microchipped": true,
+      "adopted": false,
+      "checkup": "2023-04-21",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dicta sunt esse officia quam autem iusto recusandae sint repellendus libero eligendi earum rerum praesentium illum, soluta accusamus quisquam, vero nihil? ",
+      "image": "https://media.npr.org/assets/img/2021/08/11/gettyimages-1279899488_wide-f3860ceb0ef19643c335cb34df3fa1de166e2761-s1100-c50.jpg",
+      "id": 7
     }
   ]
 }

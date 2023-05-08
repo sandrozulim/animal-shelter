@@ -1,0 +1,7 @@
+@use "../../scss";
+
+.new-animal-form {
+  padding: 2rem;
+  background-color: scss.$primary;
+  color: scss.$font-secondary;
+}

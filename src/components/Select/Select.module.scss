@@ -1,19 +1,22 @@
 @use "../../scss";
 
-.textarea {
+.select {
   @include scss.flex(column, center, center, nowrap);
   gap: 0.3rem;
+  margin: 0.5rem 0;
   padding: 0.7rem;
 
   &__input {
-    border: scss.$border-light;
-    outline: unset;
+    outline: none;
     width: 100%;
     max-width: 25rem;
-    padding: 0.3rem 0.5rem;
+    padding: 0.3rem;
     box-shadow: scss.$shadow-light;
-    &:focus {
-      outline: 1px solid scss.$primary;
-    }
+    background-color: scss.$background;
+  }
+
+  &__option {
+    padding: 1rem;
+    margin: 1rem;
   }
 }

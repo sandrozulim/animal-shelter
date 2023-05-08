@@ -4,13 +4,14 @@ type ButtonProps = {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  disabled?: boolean;
 };
 
-function Button({ children, className, onClick }: ButtonProps) {
+function Button({ children, className, onClick, disabled = false }: ButtonProps) {
   const btnClasses = className ? `${classes["btn"]} ${className}` : classes["btn"];
 
   return (
-    <button className={btnClasses} onClick={onClick}>
+    <button className={btnClasses} onClick={onClick} disabled={disabled}>
       {children}
     </button>
   );

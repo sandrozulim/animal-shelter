@@ -5,7 +5,11 @@ type PageTitleProps = {
 };
 
 function PageTitle({ title }: PageTitleProps) {
-  return <h2 className={classes["title"]}>{title}</h2>;
+  return (
+    <div className={classes["title"]}>
+      <h2 className={classes["title__text"]}>{title}</h2>
+    </div>
+  );
 }
 
 export default PageTitle;

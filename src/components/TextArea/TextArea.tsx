@@ -7,14 +7,10 @@ type TextAreaProps = React.ComponentPropsWithoutRef<"textarea"> & {
 
 function TextArea({ id, label, ...rest }: TextAreaProps) {
   return (
-    <div className={classes["container"]}>
-      {label && (
-        <label className={classes["label"]} htmlFor={id}>
-          {label}
-        </label>
-      )}
+    <div className={classes["textarea"]}>
+      {label && <label htmlFor={id}>{label}</label>}
 
-      <textarea className={classes["textarea"]} id={id} {...rest} />
+      <textarea className={classes["textarea__input"]} id={id} {...rest} />
     </div>
   );
 }

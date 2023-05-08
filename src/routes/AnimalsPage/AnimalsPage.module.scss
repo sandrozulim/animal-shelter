@@ -1,0 +1,54 @@
+@use "../../scss";
+
+.container {
+  @include scss.flex(row, space-around, flex-start, nowrap);
+  gap: 2rem;
+  padding-top: 4rem;
+  min-height: calc(100vh - scss.$header-height);
+
+  @media screen and (max-width: 800px) {
+    @include scss.flex(column, flex-start, center, nowrap);
+    padding-top: 0;
+  }
+}
+
+.filters {
+  width: 30%;
+  padding: 2rem;
+  align-self: stretch;
+  border-radius: 1px;
+  box-shadow: scss.$shadow-light;
+  background-color: scss.$primary-light;
+  color: scss.$font-secondary;
+  @media screen and (max-width: 800px) {
+    width: 100%;
+  }
+
+  &__group {
+    position: sticky;
+    top: calc(0rem + scss.$header-height);
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+  }
+}
+
+.animals {
+  width: 100%;
+
+  &__list {
+    @include scss.flex(row, flex-start, flex-start, wrap);
+    gap: 2rem;
+    max-width: 50rem;
+    @media screen and (max-width: 800px) {
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__item {
+    @media screen and (max-width: 550px) {
+      width: 80%;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use "../../scss";
+
+.animal {
+  cursor: pointer;
+  width: 14rem;
+  min-height: 7rem;
+  border-radius: 8px;
+  transition: transform 300ms ease, outline 300ms ease;
+  box-shadow: scss.$shadow;
+
+  @media screen and (max-width: 550px) {
+    width: 100%;
+  }
+
+  &:hover {
+    transform: scale(1.04);
+    outline: scss.$border-light;
+  }
+
+  &__name {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
