@@ -1,10 +1,10 @@
 import useHttp from "../../hooks/useHttp";
-import Modal from "../../components/Modal/Modal";
-import Spinner from "../../components/Spinner/Spinner";
-import AnimalForm from "../../components/AnimalForm/AnimalForm";
-import PageTitle from "../../components/PageTitle/PageTitle";
+import Modal from "../../components/shared/Modal/Modal";
+import Spinner from "../../components/shared/Spinner/Spinner";
+import AnimalForm from "../../components/Animal/AnimalForm/AnimalForm";
+import PageTitle from "../../components/shared/PageTitle/PageTitle";
 import { useNavigate } from "react-router-dom";
-import { TAnimalFormValues } from "../../models/models";
+import { TAnimalFormValues } from "../../types/types";
 import { API_ENDPOINTS } from "../../constants/constants";
 import classes from "./NewAnimalPage.module.scss";
 

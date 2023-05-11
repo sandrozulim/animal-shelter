@@ -1,0 +1,38 @@
+@use "../../../scss";
+
+.donations-list {
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+
+  &__table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 50rem;
+    padding: 1rem;
+    margin: 0 auto;
+    border: scss.$border-light;
+    background-color: scss.$background;
+    color: scss.$font-primary;
+
+    th,
+    td {
+      text-align: center;
+      padding: 0.5rem;
+    }
+  }
+
+  &__table-caption {
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    text-align: left;
+    color: scss.$secondary;
+  }
+
+  &__table-header {
+    border-bottom: 1px solid black;
+    background-color: rgb(185, 178, 178);
+    border-radius: inherit;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,25 @@
+@use "../../../scss";
+
+.input {
+  @include scss.flex(column, center, center, nowrap);
+  gap: 0.3rem;
+  padding: 0.7rem;
+
+  &__inp {
+    border: scss.$border-light;
+    width: 100%;
+    max-width: 25rem;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    background-color: scss.$background;
+    box-shadow: scss.$shadow-light;
+
+    &:focus {
+      outline: 1px solid scss.$primary;
+    }
+  }
+
+  &__error {
+    color: scss.$secondary;
+  }
+}

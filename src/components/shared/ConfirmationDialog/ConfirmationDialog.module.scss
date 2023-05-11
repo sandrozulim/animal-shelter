@@ -1,0 +1,8 @@
+@use "../../../scss";
+
+.dialog {
+  &__controls {
+    @include scss.flex(row, center, center, nowrap);
+    gap: 1rem;
+  }
+}

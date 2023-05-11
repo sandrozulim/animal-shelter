@@ -1,0 +1,23 @@
+@use "../../scss";
+
+.donation-page {
+  @include scss.flex(column, flex-start, center, nowrap);
+  gap: 1rem;
+  background-color: scss.$primary;
+  color: scss.$font-secondary;
+  min-height: calc(100vh - scss.$header-height);
+
+  h2 {
+    border-bottom: 2px solid scss.$font-secondary;
+  }
+
+  &__controls {
+    @include scss.flex(row, flex-start, center, nowrap);
+    width: 100%;
+    padding-left: 4rem;
+
+    button {
+      background-color: scss.$primary-light;
+    }
+  }
+}

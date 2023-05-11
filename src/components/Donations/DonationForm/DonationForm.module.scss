@@ -1,0 +1,12 @@
+@use "../../../scss";
+
+.form {
+  padding: 2rem;
+  background-color: scss.$primary;
+  color: scss.$font-secondary;
+
+  &__submit-btn {
+    margin: 1rem auto 0;
+    background-color: grey;
+  }
+}

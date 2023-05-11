@@ -1,28 +1,51 @@
 import { useState } from "react";
-import PageTitle from "../../components/PageTitle/PageTitle";
-import Button from "../../components/Button/Button";
-import Input from "../../components/Input/Input";
-import Map from "../../components/Map/Map";
+import PageTitle from "../../components/shared/PageTitle/PageTitle";
+import Button from "../../components/shared/Button/Button";
+import Input from "../../components/shared/Input/Input";
+import Map from "../../components/shared/Map/Map";
+import TextArea from "../../components/shared/TextArea/TextArea";
+import { EMAIL_VALIDATION_REGEX } from "../../constants/constants";
+import Modal from "../../components/shared/Modal/Modal";
 import classes from "./AboutPage.module.scss";
-import TextArea from "../../components/TextArea/TextArea";
-import Modal from "../../components/Modal/Modal";
 
 type InputChangeEvent = React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
 
 function AboutPage() {
-  const initialFormValues = { name: "", mail: "", message: "" };
+  const initialFormValues = {
+    name: "",
+    nameIsInvalid: false,
+    mail: "",
+    mailIsInvalid: false,
+    message: "",
+  };
+
   const [formValues, setFormValues] = useState(initialFormValues);
   const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
 
   const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setFormValues(initialFormValues);
-    console.log("Form submitted");
+
+    if (!formValues.nameIsInvalid && !formValues.mailIsInvalid) {
+      setFormValues(initialFormValues);
+      setIsFormOpen(false);
+      setIsFormSubmitted(true);
+    }
   };
 
   const inputChangeHandler = (e: InputChangeEvent) => {
     const { name, value } = e.target;
-    setFormValues({ ...formValues, [name]: value });
+    let isInvalid;
+
+    if (name === "name") {
+      isInvalid = value.length < 2;
+    }
+
+    if (name === "mail") {
+      isInvalid = !EMAIL_VALIDATION_REGEX.test(value);
+    }
+
+    setFormValues({ ...formValues, [name]: value, [`${name}IsInvalid`]: isInvalid });
   };
 
   return (
@@ -38,12 +61,17 @@ function AboutPage() {
         </p>
 
         <div className={classes["container__contact"]}>
-          {/* <Map /> */}
+          <Map />
+
           <div className={classes["container__contact-info"]}>
             <p>Lorem Ipsum </p>
             <p>Lorem ipsum dolor sit amet</p>
             <p>loremipsum@dummy.com</p>
+
             <Button onClick={() => setIsFormOpen(true)}>Contact us</Button>
+            {isFormSubmitted && (
+              <p className={classes["container__submitted-msg"]}>Form Submitted!</p>
+            )}
           </div>
         </div>
       </section>
@@ -57,6 +85,8 @@ function AboutPage() {
               id="name"
               value={formValues.name}
               onChange={inputChangeHandler}
+              isInvalid={formValues.nameIsInvalid}
+              errorMsg="Must be at least 2 characters"
               required
             />
 
@@ -66,6 +96,8 @@ function AboutPage() {
               id="mail"
               value={formValues.mail}
               onChange={inputChangeHandler}
+              isInvalid={formValues.mailIsInvalid}
+              errorMsg="Must be valid e-mail address"
               required
             />
 
@@ -78,7 +110,7 @@ function AboutPage() {
               required
             />
 
-            <Button>Submit</Button>
+            <Button disabled={formValues.mailIsInvalid || formValues.nameIsInvalid}>Submit</Button>
           </form>
         </Modal>
       )}

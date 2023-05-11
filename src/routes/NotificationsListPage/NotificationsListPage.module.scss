@@ -1,0 +1,14 @@
+@use "../../scss";
+
+.notifications-list {
+  @include scss.flex(column, flex-start, center, nowrap);
+  gap: 2rem;
+
+  li {
+    width: 100%;
+  }
+}
+
+.new-notification {
+  margin: 0 auto 2rem auto;
+}

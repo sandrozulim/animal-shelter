@@ -1,0 +1,54 @@
+@use "../../../scss";
+
+.nav-icon-btn {
+  padding: 0.4rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.nav {
+  position: absolute;
+  top: scss.$header-height;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  padding: 1rem 0;
+  transform: translateY(calc(-100% - scss.$header-height));
+  background-color: scss.$primary;
+  transition: transform 250ms ease;
+  z-index: 90;
+
+  &--show {
+    transform: translateY(0);
+  }
+
+  &__list {
+    @include scss.flex(column, flex-start, center, nowrap);
+    gap: 1.5rem;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    color: scss.$font-secondary;
+    background-color: scss.$primary-light;
+  }
+
+  &__link {
+    display: inline-block;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: all 350ms;
+
+    &:hover {
+      color: scss.$tertiary;
+      letter-spacing: 5px;
+    }
+  }
+
+  &__link--active {
+    color: scss.$tertiary;
+    border-bottom: 3px solid scss.$tertiary;
+  }
+}

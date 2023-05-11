@@ -1,41 +1,69 @@
 {
-  "obavijesti": [
+  "notifications": [
     {
-      "id": 1,
-      "naslov": "Svečano otvorenje",
-      "datum": "2023-04-17",
-      "tekst": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus mauris metus, vulputate vulputate neque blandit quis. Nunc ultrices diam ligula, nec commodo purus ullamcorper id. Donec aliquet libero eu tincidunt eleifend. Duis ornare tincidunt nisl quis fringilla. Curabitur bibendum metus mauris, in bibendum lectus vestibulum tristique. Sed in nibh facilisis tortor varius euismod at et lectus. In non congue elit. Donec blandit est consequat, porta tellus eu, placerat odio.",
-      "vazno": true
+      "title": "Grand Opening",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus mauris metus, vulputate vulputate neque blandit quis. Nunc ultrices diam ligula, nec commodo purus ullamcorper id. Donec aliquet libero eu tincidunt eleifend. Duis ornare tincidunt nisl quis fringilla. Curabitur bibendum metus mauris, in bibendum lectus vestibulum tristique. Sed in nibh facilisis tortor varius euismod at et lectus. In non congue elit. Donec blandit est consequat, porta tellus eu, placerat odio.",
+      "important": true,
+      "date": "2023-04-17",
+      "id": 1
     },
     {
-      "id": 2,
-      "naslov": "Međunarodni dan mačaka",
-      "datum": "2023-02-17",
-      "tekst": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus mauris metus, vulputate vulputate neque blandit quis. Nunc ultrices diam ligula, nec commodo purus ullamcorper id. Donec aliquet libero eu tincidunt eleifend. Duis ornare tincidunt nisl quis fringilla. Curabitur bibendum metus mauris, in bibendum lectus vestibulum tristique. Sed in nibh facilisis tortor varius euismod at et lectus. In non congue elit. Donec blandit est consequat, porta tellus eu, placerat odio.",
-      "vazno": false
+      "title": "International Cat Day",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus mauris metus, vulputate vulputate neque blandit quis. Nunc ultrices diam ligula, nec commodo purus ullamcorper id. Donec aliquet libero eu tincidunt eleifend. Duis ornare tincidunt nisl quis fringilla. Curabitur bibendum metus mauris, in bibendum lectus vestibulum tristique. Sed in nibh facilisis tortor varius euismod at et lectus. In non congue elit. Donec blandit est consequat, porta tellus eu, placerat odio.",
+      "important": false,
+      "date": "2023-02-17",
+      "id": 2
+    },
+    {
+      "title": "New event",
+      "text": "Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy ",
+      "important": true,
+      "date": "2023-05-11",
+      "id": 3
     }
   ],
-  "donacije": [
+  "donations": [
     {
-      "id": 1,
-      "kategorija": "donirano",
-      "tip": "Hrana",
-      "vrijednost": 25,
-      "opis": "Suha hrana za pse - 10kg"
+      "category": "donated",
+      "type": "Food",
+      "value": 25,
+      "description": "Dry dog food - 10kg",
+      "id": 1
     },
     {
-      "id": 2,
-      "kategorija": "trazi",
-      "tip": "Igračke",
-      "vrijednost": 15,
-      "opis": "Grebalica za mačke"
+      "category": "donated",
+      "type": "Toys",
+      "value": 15,
+      "description": "Scratching post for cats",
+      "id": 2
     },
     {
-      "id": 3,
-      "kategorija": "nudi",
-      "tip": "Ostalo",
-      "vrijednost": 25,
-      "opis": "Kavez za srednje papige"
+      "category": "offering",
+      "type": "Other",
+      "value": 25,
+      "description": "Medium parrot cage",
+      "id": 3
+    },
+    {
+      "category": "offering",
+      "type": "food",
+      "value": 0,
+      "description": "",
+      "id": 6
+    },
+    {
+      "category": "requesting",
+      "type": "Food",
+      "value": 25,
+      "description": "Dry dog food - 10kg",
+      "id": 10
+    },
+    {
+      "category": "requesting",
+      "type": "Toys",
+      "value": 15,
+      "description": "Scratching post for cats",
+      "id": 11
     }
   ],
   "animals": [

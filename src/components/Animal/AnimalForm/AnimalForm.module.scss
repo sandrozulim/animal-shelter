@@ -1,0 +1,11 @@
+@use "../../../scss";
+
+.submit-btn {
+  margin: 0 auto;
+  background-color: grey;
+}
+
+.checkbox-container {
+  @include scss.flex(row, center, center, nowrap);
+  margin: 1rem 0;
+}

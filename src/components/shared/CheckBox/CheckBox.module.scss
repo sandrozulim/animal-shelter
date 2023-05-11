@@ -1,0 +1,16 @@
+@use "../../../scss";
+
+.checkbox {
+  @include scss.flex(row, center, center, nowrap);
+  gap: 0.4rem;
+  padding: 0.7rem;
+
+  &__input {
+    cursor: pointer;
+    accent-color: scss.$tertiary;
+  }
+
+  &__label {
+    cursor: pointer;
+  }
+}

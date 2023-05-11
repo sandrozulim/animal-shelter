@@ -1,23 +1,23 @@
 import { useEffect, useState, useContext } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import useHttp from "../../hooks/useHttp";
-import Spinner from "../../components/Spinner/Spinner";
-import Button from "../../components/Button/Button";
-import Modal from "../../components/Modal/Modal";
-import AnimalForm from "../../components/AnimalForm/AnimalForm";
-import AnimalPicture from "../../components/AnimalPicture/AnimalPicture";
-import AnimalDescription from "../../components/AnimalDescription/AnimalDescription";
+import Spinner from "../../components/shared/Spinner/Spinner";
+import Button from "../../components/shared/Button/Button";
+import Modal from "../../components/shared/Modal/Modal";
+import AnimalForm from "../../components/Animal/AnimalForm/AnimalForm";
+import AnimalPicture from "../../components/Animal/AnimalPicture/AnimalPicture";
+import AnimalDescription from "../../components/Animal/AnimalDescription/AnimalDescription";
 import { AiOutlineEdit, AiOutlineDelete, AiOutlineArrowLeft } from "react-icons/ai";
 import { BsHouseHeart } from "react-icons/bs";
 import { UserContext } from "../../contexts/UserContext";
 import { API_ENDPOINTS } from "../../constants/constants";
-import { TAnimal, TAnimalFormValues } from "../../models/models";
+import { TAnimal, TAnimalFormValues } from "../../types/types";
 import classes from "./AnimalDetailsPage.module.scss";
-import ConfirmationDialog from "../../components/ConfirmationDialog/ConfirmationDialog";
+import ConfirmationDialog from "../../components/shared/ConfirmationDialog/ConfirmationDialog";
 
 function AnimalDetailPage() {
-  const [animal, setAnimal] = useState<TAnimal | null>(null);
   const { isLoading, error, clearError, sendRequest } = useHttp();
+  const [animal, setAnimal] = useState<TAnimal | null>(null);
   const [isEditModeOpen, setIsEditModeOpen] = useState(false);
   const [isConfirmDialogOpen, setIsConfirmDialogOpen] = useState(false);
   const navigate = useNavigate();
@@ -100,6 +100,7 @@ function AnimalDetailPage() {
                 <AiOutlineDelete />
               </Button>
             )}
+
             {userCtx.isAdmin && (
               <Button onClick={() => setIsEditModeOpen(true)}>
                 <AiOutlineEdit />
