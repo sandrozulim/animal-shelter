@@ -15,11 +15,11 @@
       "id": 2
     },
     {
-      "title": "New event",
-      "text": "Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy Dummy ",
+      "title": "Dog event",
+      "text": "Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum",
       "important": true,
       "date": "2023-05-11",
-      "id": 3
+      "id": 4
     }
   ],
   "donations": [
@@ -38,18 +38,11 @@
       "id": 2
     },
     {
-      "category": "offering",
+      "category": "donated",
       "type": "Other",
       "value": 25,
       "description": "Medium parrot cage",
       "id": 3
-    },
-    {
-      "category": "offering",
-      "type": "food",
-      "value": 0,
-      "description": "",
-      "id": 6
     },
     {
       "category": "requesting",
@@ -59,11 +52,11 @@
       "id": 10
     },
     {
-      "category": "requesting",
-      "type": "Toys",
-      "value": 15,
-      "description": "Scratching post for cats",
-      "id": 11
+      "type": "medications",
+      "value": "15",
+      "description": "Some medications for cats",
+      "category": "offering",
+      "id": 12
     }
   ],
   "animals": [
@@ -94,7 +87,7 @@
       "age": 1,
       "species": "dog",
       "microchipped": false,
-      "adopted": true,
+      "adopted": false,
       "checkup": "2023-06-07",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dicta sunt esse officia quam autem iusto recusandae sint repellendus libero eligendi earum rerum praesentium illum, soluta accusamus quisquam, vero nihil? ",
       "image": "https://www.purina.co.uk/sites/default/files/2020-12/Dog_1098119012_Teaser.jpg",
