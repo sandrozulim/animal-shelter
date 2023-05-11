@@ -18,8 +18,8 @@ import {
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Root />}>
-      <Route path="about" element={<AboutPage />} />
-      <Route index element={<AnimalListPage />} />
+      <Route index element={<AboutPage />} />
+      <Route path="animals" element={<AnimalListPage />} />
       <Route path="animals/:animalId" element={<AnimalDetailPage />} />
       <Route path="new-animal" element={<NewAnimalPage />} />
       <Route path="donations" element={<DonationsListPage />} />

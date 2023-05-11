@@ -9,8 +9,8 @@ function Header() {
   const { isAdmin, setIsAdmin } = useContext(UserContext);
 
   const navList = [
-    { path: "about", name: "About" },
-    { path: "/", name: "Animals", index: true },
+    { path: "/", name: "About", index: true },
+    { path: "animals", name: "Animals" },
     { path: "donations", name: "Donations" },
     { path: "notifications", name: "Notifications" },
   ];
