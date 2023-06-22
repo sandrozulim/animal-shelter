@@ -7,9 +7,9 @@
 All my projects are pushed on Github:
 https://github.com/sandrozulim
 
--clone the repo
--install dependencies
--in the terminal run commands  "json-server --watch db.json" and "npm run dev"
+-clone the repo  
+-install dependencies  
+-in the terminal run commands  "json-server --watch db.json" and "npm run dev"  
 
 
 
