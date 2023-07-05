@@ -4,8 +4,6 @@
 
 ##CRUD app made with React/Typescript, SCSS, react-router for routing.
 
-All my projects are pushed on Github:
-https://github.com/sandrozulim
 
 -clone the repo  
 -install dependencies  
